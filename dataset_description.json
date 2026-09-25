@@ -13,5 +13,6 @@
     ],
     "EthicsApprovals": [
         "The study was conducted in accordance with the applicable ethical standards.  All participants or their legal representatives provided informed consent, as applicable."
-    ]
+    ],
+    "DatasetDOI": "doi:10.18112/openneuro.ds008861.v1.0.0"
 }
