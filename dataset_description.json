@@ -1,5 +1,5 @@
 {
-    "Name": "[Unspecified]",
+    "Name": "MEG and Structural MRI Dataset: Attended and Ignored Speech-Like Sounds",
     "BIDSVersion": "1.7.0",
     "DatasetType": "raw",
     "Authors": [
