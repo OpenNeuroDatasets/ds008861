@@ -8,5 +8,7 @@
     ],
     "Acknowledgements": "We sincerely thank all of volunteers who participated in this study.",
     "License": "CC0",
-    "Funding": []
+    "Funding": [
+        "The study was supported by the Russian Science Foundation (project N 25-18-00739)."
+    ]
 }
