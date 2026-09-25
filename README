@@ -1,17 +1,15 @@
-# Project name:
-
-**MEG+EEG and Structural MRI Dataset: Attended and Ignored Speech-Like Sounds**
+# MEG+EEG and Structural MRI Dataset: Attended and Ignored Speech-Like Sounds
 
 ## Overview
 
-This dataset contains magnetoencephalography (MEG) and structural magnetic resonance imaging (MRI) data collected to investigate the neural processing of vowel-like acoustic features in children.
+This dataset contains magnetoencephalography (MEG), electroencephalography (EEG), and structural magnetic resonance imaging (MRI) data collected to investigate the neural processing of vowel-like acoustic features in healthy adults.
 
 The experiment included two listening conditions:
 
 - **Attended:** participants actively listened to the sounds and detected a brief silent gap embedded in the stimulus.
 - **Ignored:** participants listened passively to the sounds while their attention was directed to a silent visual stimulus.
 
-The dataset is intended for studying auditory processing, attention, speech-related acoustic features, and their neural correlates using MEG and source reconstruction methods.
+The dataset is intended for studying auditory processing, attention, speech-related acoustic features, and their neural correlates using MEG/EEG recordings and MEG source reconstruction methods.
 
 ## Study Design
 
@@ -30,18 +28,24 @@ In the ignored condition, participants listened passively and were instructed to
 
 ## Participants
 
-The dataset includes anonymized participants identified using labels such as `G002`, `G003`, and so on.
+The dataset includes 30 healthy adult participants identified using anonymized labels such as G002, G003, and so on.
 
 Participant information and demographic characteristics are provided in the corresponding participants files.
 
-- Population: children
-- Groups: `[TO BE COMPLETED]`
-- Age range: `[TO BE COMPLETED]`
-- Number of participants: `[TO BE COMPLETED]`
+Population: healthy adults
+Groups: healthy adults
+Age range: 20-41 y
+Number of participants: 30
 
 ## Data Acquisition
 
 MEG data were recorded using an Elekta Neuromag VectorView system with 306 sensors, including magnetometers and planar gradiometers.
+
+MEG and EEG were recorded simultaneously. EEG was acquired using an MCScap EEG cap based on the standard 10–10 electrode placement system. The cap was designed for 64 electrodes; however, 57 electrodes were connected to the EEG inputs of the Elekta system. The 57 connected electrodes corresponded to 57 EEG channels of the MEG amplifier.
+
+The FIF recordings contain 60 EEG channels. Three Elekta EEG channels were not connected to electrodes on the cap: T9, T10, and Iz. In addition, seven electrodes present on the MCScap were not connected because they were not included in the corresponding electrode configuration of the original Elekta system: FC3, FC4, FCz, CPz, CP5, CP6, and POz.
+
+The EEG channels were recorded as part of the simultaneous MEG acquisition but were not used in the preprocessing or analyses described in this dataset. The preprocessing pipeline described below therefore concerns the MEG data only.
 
 The data were sampled at 1000 Hz. Structural MRI data were acquired for individual anatomical reconstruction and source localization.
 
@@ -54,6 +58,7 @@ The dataset follows the Brain Imaging Data Structure (BIDS) specification.
 The main data types include:
 
 - MEG recordings
+- EEG channels recorded simultaneously with the MEG
 - Structural MRI data
 - Anatomical derivatives generated using FreeSurfer
 - Preprocessed MEG data
